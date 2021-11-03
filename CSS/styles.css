@@ -1,2 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+/*general*/
+a {
+  text-decoration: none;
+  color: #232136; /*Base #232136*/
+}
+
+li {
+  list-style: none;
+  margin: 2rem;
+}
+h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  align-self: flex-start;
+  margin: 2rem;
+}
+/*colors*/
+
 body {
+  grid-template-columns: repeat(4, 1fr);
+
+  background-color: #eee9e6; /*highlight #eee9e6*/
+}
+.container {
+  display: grid;
+}
+
+.contact-nav {
+  display: flex;
+  background-color: #9ccfd8; /*foam #9ccfd8*/
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 2rem;
+  grid-column: span 3;
+  margin: 1rem;
+}
+
+.card {
+  display: flex;
+  background-color: #e0def4;
+  border-radius: 10%;
+  padding: 1rem;
+  margin: 4rem;
 }
