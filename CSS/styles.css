@@ -51,7 +51,45 @@ body {
 .card {
   display: flex;
   background-color: #e0def4;
-  border-radius: 10%;
+  border-radius: 10px;
   padding: 1rem;
   margin: 4rem;
+}
+
+/* add contact page #2 */
+
+.add-contact {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column: span 2;
+  align-items: center;
+}
+
+.contact-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column: 2;
+  justify-content: center;
+}
+
+input {
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.profile-img {
+  max-height: 125px;
+  border-radius: 50%;
+  border: black 2px solid;
+}
+
+.card-contact {
+  grid-column: 1 / span 2;
+}
+
+.btn {
+  background-color: #3e8fb0;
+  border-radius: 5px;
+  margin: 1rem;
 }
