@@ -17,28 +17,33 @@ li {
 h1 {
   font-size: 2.5rem;
   font-weight: 400;
-  align-self: flex-start;
   margin: 2rem;
+}
+
+ul {
+  justify-self: right;
 }
 /*colors*/
 
 body {
   grid-template-columns: repeat(4, 1fr);
-
   background-color: #eee9e6; /*highlight #eee9e6*/
 }
 .container {
   display: grid;
 }
 
-.contact-nav {
-  display: flex;
+nav {
+  display: grid;
   background-color: #9ccfd8; /*foam #9ccfd8*/
+  grid-template-columns: 1;
+  grid-template-rows: repeat(4, auto);
   height: 100vh;
-  flex-direction: column;
-  align-items: center;
 }
 
+.list-nav {
+  justify-self: right;
+}
 .main {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -54,6 +59,7 @@ body {
   border-radius: 10px;
   padding: 1rem;
   margin: 4rem;
+  border: black 1px solid;
 }
 
 /* add contact page #2 */
@@ -79,17 +85,58 @@ input {
 }
 
 .profile-img {
-  max-height: 125px;
+  max-height: 8rem;
   border-radius: 50%;
   border: black 2px solid;
+  margin: 1rem;
 }
 
-.card-contact {
+.card-input {
   grid-column: 1 / span 2;
 }
 
 .btn {
-  background-color: #3e8fb0;
-  border-radius: 5px;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.save-btn {
+  background-color: #5794a0; /*#5794a0 from example*/
+}
+
+.cancel-btn {
+  background-color: #b7617a; /*#b7617a from example*/
+}
+
+.edit-btn {
+  background-color: #5794a0; /*#5794a0 from example*/
+}
+
+.close-btn {
+  background-color: #022b33;
+}
+
+.fav-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, auto);
+  align-items: center;
+  padding: 1rem;
   margin: 1rem;
 }
+
+.name {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: center;
+}
+
+.info {
+  grid-column: span 2;
+  margin: 1rem;
+  line-height: 2rem;
+}
+
+@media (min-wid);
