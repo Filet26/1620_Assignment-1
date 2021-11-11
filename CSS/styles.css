@@ -20,29 +20,36 @@ h1 {
   margin: 2rem;
 }
 
+a:hover {
+  border-bottom: #fff 2px solid;
+}
 ul {
   justify-self: right;
 }
-/*colors*/
 
 body {
-  grid-template-columns: repeat(4, 1fr);
   background-color: #eee9e6; /*highlight #eee9e6*/
 }
 .container {
   display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 nav {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   background-color: #9ccfd8; /*foam #9ccfd8*/
-  grid-template-columns: 1;
-  grid-template-rows: repeat(4, auto);
   height: 100vh;
+  grid-column: 1;
+  align-items: center;
+}
+
+.nav-header {
+  align-self: start;
 }
 
 .list-nav {
-  justify-self: right;
+  justify-content: center;
 }
 .main {
   display: grid;
@@ -60,6 +67,7 @@ nav {
   padding: 1rem;
   margin: 4rem;
   border: black 1px solid;
+  min-height: 0;
 }
 
 /* add contact page #2 */
@@ -99,19 +107,19 @@ input {
   margin: 1rem;
   padding: 1rem;
   border-radius: 10px;
-  color: #fff;
+  color: rgb(255, 255, 255);
 }
 
 .save-btn {
-  background-color: #5794a0; /*#5794a0 from example*/
+  background-color: #2e626d; /*#5794a0 from example, darkened for accessibility*/
 }
 
 .cancel-btn {
-  background-color: #b7617a; /*#b7617a from example*/
+  background-color: #8d465a; /*#b7617a from example darkened for accessibility*/
 }
 
 .edit-btn {
-  background-color: #5794a0; /*#5794a0 from example*/
+  background-color: #2e626d; /*#5794a0 from example darkened for accessibility*/
 }
 
 .close-btn {
@@ -139,4 +147,31 @@ input {
   line-height: 2rem;
 }
 
-@media (min-wid);
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .main {
+    grid-template-columns: 1fr;
+  }
+  h1 {
+    margin: 0.5rem;
+  }
+  li {
+    margin: 0.5rem;
+    background-color: #745a612a;
+    padding: 0.2rem;
+    border-radius: 10px;
+  }
+
+  .nav-header {
+    align-self: center;
+  }
+  nav {
+    display: flexbox;
+    grid-column: span 2;
+    height: 25vh;
+    justify-content: center;
+  }
+}
